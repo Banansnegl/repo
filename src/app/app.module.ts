@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { rootRouterConfig } from './app.routes';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
+   RouterModule.forRoot(rootRouterConfig, { useHash: true }),
     HttpModule
   ],
   providers: [],
